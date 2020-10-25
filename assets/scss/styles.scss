@@ -38,10 +38,16 @@
 body {
     min-width: 375px;
 
-    #top-pattern, #bottom-pattern { 
-        z-index: -1; 
-        position: absolute;
-    }        
+    .pattern-img-container {
+        position: relative;
+        width: 100vw;
+        #top-pattern, #bottom-pattern { 
+            z-index: -1; 
+            overflow: hidden !important;
+            position: absolute;
+            display: block;
+        }        
+    }
 
     #top-pattern { top: 0; left: 0; }
     #bottom-pattern { bottom: 0; right: 0; }
@@ -227,6 +233,7 @@ body {
     * { padding: 0; margin: 0; box-sizing: border-box; }
 
     body {
+
         padding: 0; margin: 0; box-sizing: border-box;
         #top-pattern, #bottom-pattern { 
             z-index: -1; 

@@ -35,9 +35,15 @@
 body {
   min-width: 375px;
 }
-body #top-pattern, body #bottom-pattern {
+body .pattern-img-container {
+  position: relative;
+  width: 100vw;
+}
+body .pattern-img-container #top-pattern, body .pattern-img-container #bottom-pattern {
   z-index: -1;
+  overflow: hidden !important;
   position: absolute;
+  display: block;
 }
 body #top-pattern {
   top: 0;
