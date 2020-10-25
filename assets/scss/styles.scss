@@ -1,0 +1,229 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+
+@font-face {
+    font-family: Spartan; font-weight: 400;
+    src: url('../fonts/Spartan/static/Spartan-Regular.ttf');
+}
+
+@font-face {
+    font-family: Spartan; font-weight: 500;
+    src: url('../fonts/Spartan/static/Spartan-Medium.ttf');
+}
+
+@font-face {
+    font-family: Spartan; font-weight: 700;
+    src: url('../fonts/Spartan/static/Spartan-Bold.ttf');
+}
+
+:root {
+    --color-1: hsl(300, 43%, 22%);
+    --color-2: hsl(333, 80%, 67%);
+    --color-3: hsl(303, 10%, 53%);
+    --color-4: hsl(300, 24%, 96%);
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    #top-pattern, #bottom-pattern { z-index: -1; }        
+
+    #top-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    #bottom-pattern {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding: 4.5rem 2.2rem;
+
+        .upper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .upper-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 2.5rem;
+                    letter-spacing: 0;
+                    font-weight: var(--font-weight-bold);
+                    color: var(--color-1);
+                    text-align: center;
+                }
+
+                p {
+                    padding: .3rem;
+                    font-weight: var(--font-weight-medium);
+                    color: var(--color-3);
+                    // text-align: center;
+                    line-height: 1.5rem;
+                    margin-top: 2rem;
+                    
+                    text-align: center;
+                    text-justify: inter-word;
+                }
+            }
+
+            .upper-right {
+                width: 100%;
+                margin-top: 2rem;
+
+                display: flex;
+                flex-direction: column;
+
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        margin: 1rem auto;
+                        padding: 1rem;
+                        background-color: var(--color-4);
+
+                        > * { flex: 1; }
+
+                        border-radius: .5rem;
+
+                        .stars {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+
+                            span.fa-star.checked {
+                                margin: 0 .34rem;
+                                color: rgb(231, 136, 12);
+                            }
+                        }
+
+                        .rate-text {
+                            margin-top: 1rem;
+                            text-align: center;
+                            font-weight: var(--font-weight-bold);
+                            color: var(--color-1);
+
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lower {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            margin-top: 1rem;
+
+            .card {
+                margin-top: 1.125rem;
+                background-color: var(--color-1);
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 2rem;
+                border-radius: .5rem;
+
+                .card-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    width: 100%;
+
+                    img {
+                        max-width: 3rem;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        margin-left: 1.5rem;
+                        
+                        .name {
+                            font-weight: var(--font-weight-medium);
+                            color: var(--color-4)
+                        }
+
+                        .title {
+                            font-size: .85rem;
+                            font-weight: var(--font-weight-regular);
+                            color: var(--color-3)
+                        }
+                    }
+                }
+
+                .card-content {
+                    margin-top: 1.5rem;
+                    color: var(--color-4);
+                    font-size: .85rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .floating-container {
+        position: sticky;
+        bottom: 0;
+        background-color: #333;
+        padding: 2rem;
+        opacity: .75;
+        border-radius: .25rem;
+        
+        &.active { opacity: 1; }
+
+        .attribution {
+            font-size: .75rem;
+            text-align: center;
+            color: var(--color-4);
+            
+            a {
+                color: hsl(228, 76%, 68%);
+            }
+        }
+    }
+}
