@@ -211,7 +211,8 @@ body .floating-container .attribution a {
     margin: 0;
     box-sizing: border-box;
   }
-  body #top-pattern, body #bottom-pattern {
+  body #top-pattern,
+body #bottom-pattern {
     z-index: -1;
     position: absolute;
   }
@@ -243,17 +244,17 @@ body .floating-container .attribution a {
     flex-direction: column;
     justify-content: space-between;
   }
+  body .container .upper .upper-left > * {
+    flex: 1;
+    text-align: left;
+  }
   body .container .upper .upper-left h2 {
     margin-right: 35%;
-    text-align: left;
-    flex: 1;
     font-size: 2rem;
     word-wrap: break-word;
   }
   body .container .upper .upper-left p {
     margin-right: 15%;
-    text-align: left;
-    flex: 1;
     font-size: 0.75rem;
   }
   body .container .upper .upper-right {
@@ -270,15 +271,12 @@ body .floating-container .attribution a {
     align-items: center;
   }
   body .container .upper .upper-right ul li {
-    margin-left: unset;
-    margin-right: unset;
-    width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-  }
-  body .container .upper .upper-right ul li > * {
-    flex: unset;
+    margin-left: unset;
+    margin-right: unset;
+    width: 75%;
   }
   body .container .upper .upper-right ul li:first-child {
     align-self: flex-start;
@@ -286,13 +284,15 @@ body .floating-container .attribution a {
   body .container .upper .upper-right ul li:last-child {
     align-self: flex-end;
   }
-  body .container .upper .upper-right ul li .stars {
+  body .container .upper .upper-right ul li > * {
     margin: unset;
+    flex: unset;
+  }
+  body .container .upper .upper-right ul li .stars {
     justify-content: unset;
   }
   body .container .upper .upper-right ul li .rate-text {
     font-size: 0.75rem;
-    margin: unset;
   }
   body .container .lower {
     display: flex;

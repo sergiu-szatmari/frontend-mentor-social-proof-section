@@ -41,6 +41,7 @@ body {
     .pattern-img-container {
         position: relative;
         width: 100vw;
+
         #top-pattern, #bottom-pattern { 
             z-index: -1; 
             overflow: hidden !important;
@@ -84,10 +85,8 @@ body {
                     padding: .3rem;
                     font-weight: var(--font-weight-medium);
                     color: var(--color-3);
-                    // text-align: center;
                     line-height: 1.5rem;
                     margin-top: 2rem;
-                    
                     text-align: center;
                     text-justify: inter-word;
                 }
@@ -96,7 +95,6 @@ body {
             .upper-right {
                 width: 100%;
                 margin-top: 2rem;
-
                 display: flex;
                 flex-direction: column;
 
@@ -115,10 +113,9 @@ body {
                         margin: 1rem auto;
                         padding: 1rem;
                         background-color: var(--color-4);
-
-                        > * { flex: 1; }
-
                         border-radius: .5rem;
+                        
+                        > * { flex: 1; }
 
                         .stars {
                             display: flex;
@@ -222,9 +219,7 @@ body {
             text-align: center;
             color: var(--color-4);
             
-            a {
-                color: hsl(228, 76%, 68%);
-            }
+            a { color: hsl(228, 76%, 68%); }
         }
     }
 }
@@ -234,7 +229,9 @@ body {
 
     body {
         padding: 0; margin: 0; box-sizing: border-box;
-        #top-pattern, #bottom-pattern { 
+
+        #top-pattern,
+        #bottom-pattern { 
             z-index: -1; 
             position: absolute;
         }        
@@ -262,19 +259,16 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     
+                    & > * { flex: 1; text-align: left; }
 
                     h2 {
                         margin-right: 35%;
-                        text-align: left;
-                        flex: 1;
                         font-size: 2rem;
                         word-wrap: break-word;
                     }
                     
                     p {
                         margin-right: 15%;
-                        text-align: left;
-                        flex: 1;
                         font-size: .75rem;
                     }
                 }
@@ -294,36 +288,20 @@ body {
                         align-items: center;
 
                         li {
-                            & > * { flex: unset; }
-
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            
                             margin-left: unset;
                             margin-right: unset;
                             width: 75%;
-
-
-                            &:first-child { 
-                                align-self: flex-start;
-                            }
-
-                            &:last-child { 
-                                align-self: flex-end;
-                            }
-
-                            display: flex;
-                            flex-direction: row;
-                            // justify-content: flex-start;
-                            justify-content: space-evenly;
-
-                            .stars { 
-                                margin: unset;
-                                justify-content: unset;
-                            }
-
-                            .rate-text {
-                                font-size: .75rem;
-                                margin: unset; 
-                                // margin-left: 2rem;
-                            }
+                            
+                            &:first-child { align-self: flex-start; }
+                            &:last-child { align-self: flex-end; }
+                            
+                            & > * { margin: unset; flex: unset; }
+                            .stars { justify-content: unset; }
+                            .rate-text { font-size: .75rem; }
                         }
                     }
                 }
@@ -339,7 +317,6 @@ body {
 
                 & > * { flex: 1; height: 75%; }
 
-
                 .card {
                     height: 15rem;
                     align-items: stretch;
@@ -347,12 +324,10 @@ body {
                     justify-content: space-around;
 
                     &:not(:first-child) { margin-left: 1rem; }
-
                     &:first-child { align-self: flex-start; }
                     &:last-child { align-self: flex-end; }
 
                     .card-header {
-                        img {}
                         .info {
                             .name { font-size: .75rem; }
                             .title { font-size: .75rem; }
@@ -394,9 +369,7 @@ body {
         font-size: 1.5rem;
         .upper {
             .upper-left {
-                h2 {
-                    font-size: 3rem !important;
-                }
+                h2 { font-size: 3rem !important; }
 
                 p {
                     font-size: 1.5rem !important;
