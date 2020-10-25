@@ -233,7 +233,6 @@ body {
     * { padding: 0; margin: 0; box-sizing: border-box; }
 
     body {
-
         padding: 0; margin: 0; box-sizing: border-box;
         #top-pattern, #bottom-pattern { 
             z-index: -1; 
@@ -251,6 +250,7 @@ body {
             flex-direction: column;
 
             .upper {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -335,6 +335,7 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 height: 100%;
+                padding: 7vh 0;
 
                 & > * { flex: 1; height: 75%; }
 
@@ -383,6 +384,50 @@ body {
 
             left: 1.5rem;
             bottom: 1.5rem;
+        }
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .container {
+        font-size: 1.5rem;
+        .upper {
+            .upper-left {
+                h2 {
+                    font-size: 3rem !important;
+                }
+
+                p {
+                    font-size: 1.5rem !important;
+                    line-height: 1.75rem !important;
+                }
+            }
+
+            .upper-right {
+                ul {
+                    li {
+                        .rate-text {
+                            font-size: 1rem !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lower {
+            .card {
+                .card-header {
+                    .info {
+                        .name { font-size: 1rem !important; }
+                        .title { font-size: 1rem !important; }
+                    }
+                }
+                .card-content {
+                    font-size: 1rem !important;
+                    line-height: 1.2rem !important;
+                }
+            }
         }
     }
 }
